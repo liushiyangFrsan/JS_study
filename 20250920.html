@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var number_1 = 10
+        number_1++
+        document.write(number_1)
+        // console.log(number_1)
+
+        var number_2 = 10
+        ++number_2
+        document.write(number_2)
+        // console.log(number_2)
+
+        var number_3 = 10
+        document.write(number_3++)
+        console.log(number_3++)
+
+        var number_4 = 10
+        document.write(++number_4)
+        // console.log(++number_4)
+
+        var n = 10
+        var res = ++n + n++ + ++n
+        console.log(n, res)
+
+    </script>
+
+    <br>
+    <script>
+        console.log('自减')
+        var n = 10
+        document.write(--n)
+        console.log(n)
+
+        var n = 10
+        document.write(n--)
+        console.log(n)
+
+        var m = 10
+        var res = m++ + --m + m-- + ++m
+        console.log(m, res)
+
+        var m = 10
+        var res = m++ + --m + m--
+        console.log(m, res)
+
+        var m = 10
+        var res = m++ + --m + ++m
+        console.log(m, res)
+
+    </script>
+    
+    <br>
+    <script>
+        10 > 20 ? console.log(111) : console.log(222)
+        10 < 20 ? console.log(111) : console.log(222)
+
+        var sum = 200
+        var youhuisum = sum > 200 ? sum-10 : sum
+        console.log(sum, youhuisum)
+
+        var sum = 210
+        var youhuisum = sum > 200 ? sum-10 : sum
+        console.log(sum, youhuisum)
+
+        var sum = 190
+        var youhuisum = sum > 200 ? sum-10 : sum
+        console.log(sum, youhuisum)
+
+        var sum = 210
+        var youhuisum = sum > 200 ? sum - 10: (sum > 100 ? sum -5 : sum)
+        console.log(sum, youhuisum)
+
+        var sum = 190
+        var youhuisum = sum > 200 ? sum - 10: (sum > 100 ? sum -5 : sum)
+        console.log(sum, youhuisum)
+
+        var sum = 90
+        var youhuisum = sum > 200 ? sum - 10: (sum > 100 ? sum -5 : sum)
+        console.log(sum, youhuisum)
+    </script>
+
+    <br>
+    <script>
+        var sum = 210
+        var youhuisum
+        if (sum > 200){
+            youhuisum = sum - 10
+        }
+        console.log(sum, youhuisum)
+
+        var sum = 190
+        var youhuisum1
+        if (sum > 200){
+            youhuisum1 = sum - 10
+        }
+        console.log(sum, youhuisum1)
+
+        var sum = 190
+        var youhuisum1
+        if (sum > 200){
+            youhuisum1 = sum - 10
+        }else{
+            youhuisum1 = sum
+        }
+        console.log(sum, youhuisum1)
+
+        var price = 46
+        var res_price
+        if (price>200) {res_price = price - 10}
+        else if (price>100){res_price = price - 5}
+        else if (price>50){res_price = price - 3}
+        else{res_price=price}
+        console.log('多条件if', price, res_price)
+    </script>
+    <br>
+    <script>
+        /*
+        1、判断奇数偶数
+        2、根据0 ~ 100 的数字输出成绩
+            [90, 100] 输出A
+            [80, 90) 输出B
+            [70, 80) 输出C
+            [60, 70) 输出D
+            [0, 60) 输出E
+        3、判断闰年
+            世纪闰年：公历年份是整百数的，必须是400的倍数才是闰年
+            普通闰年：公历年份是4的倍数，且不是100的倍数
+        */
+
+       var num = 2
+       if (num % 2 === 1) {console.log('奇数')}
+       else{console.log('偶数')}
+
+       var num = 10
+       if (num % 2) {console.log('奇数')}
+       else{console.log('偶数')}
+
+       var score = 120
+       if (score > 100) {console.log('成绩输入错误,成绩不能大于100')}
+       else if(score >= 90) {console.log('A')}
+       else if (score >= 80) {console.log('B')}
+       else if (score >= 70) {console.log('C')}
+       else if (score >= 60) {console.log('D')}
+       else if (score >= 0) {console.log('E')}
+       else {console.log('成绩输入错误,成绩不能小于0')}
+
+       var year = 2025
+       if (year % 400 === 0) {console.log('世纪闰年')}
+       else if (year % 4 === 0 && year % 100 > 0) {console.log('普通闰年')}
+       else {console.log('不是闰年')}
+
+       var year_= 2022
+       console.log(year_ % 100 !== 0)
+       if ((year_ % 400 === 0) || (year_ % 4 == 0 && year_ % 100 !== 0)) 
+       {console.log('闰年')}
+       else {console.log('平年')}
+
+       console.log(true || false && false)
+
+    </script>
+    <br>
+    <script>
+        /*
+            状态码:
+                1 未付款
+                2 已付款
+                3 已发货
+                4 已完成
+        */
+        var num = '1'
+        switch (num) {
+            case 1: 
+                console.log('未付款')
+                document.write('未付款')
+                break
+            case 2: 
+                console.log('已付款')
+                document.write('已付款')
+                break
+            case 3: 
+                console.log('已发货')
+                document.write('已发货')
+                break
+            case 4: 
+                console.log('已完成')
+                document.write('已完成')
+                break
+            default:
+                console.log('出错了')
+                document.write('出错了')
+        }
+    </script>
+
+    <script>
+        // 200-10   100-5  50-3
+        var price = 44
+        var sum
+        switch (true){
+            case price >= 200:
+                sum = price - 10
+                break
+            case price >= 100 && price < 200:
+                sum = price - 5
+                break
+            case price >= 50 && price < 100:
+                sum = price - 3
+                break
+            default:
+                sum = price
+        }
+        console.log(price, sum)
+    </script>
+    <script>
+        // 根据1~12的数字来输出一个月有多少天，不考虑闰年
+        var month = 1
+        var total_days
+        switch (month){
+            case 1: total_days = 31; break
+            case 2: total_days = 28; break
+            case 3: total_days = 31; break
+            case 4: total_days = 30; break
+            case 5: total_days = 31; break
+            case 6: total_days = 30; break
+            case 7: total_days = 31; break
+            case 8: total_days = 31; break
+            case 9: total_days = 30; break
+            case 10: total_days = 31; break
+            case 11: total_days = 30; break
+            case 12: total_days = 31; break
+        }
+        console.log('当前查询的月份是：', month, '月；共有', total_days, '天')
+
+        var month = 1
+        var total_days
+        switch (month){
+            case 1: 
+            case 3: 
+            case 5: 
+            case 7: 
+            case 8: 
+            case 10: 
+            case 12: total_days = 31; break
+            case 2: total_days = 28; break
+            case 4: 
+            case 6: 
+            case 9: 
+            case 11: total_days = 30; break
+            default: break
+        }
+        console.log('当前查询的月份是：', month, '月；共有', total_days, '天')
+    </script>
+    <script>
+        // 成绩 90 > A    80 > B    70 > C      60 > D      0 > E
+        var score = 76
+        var flagscore = parseInt(score/10)
+        var level
+        switch(flagscore){
+            case 10:
+            case 9: level = 'A'; break
+            case 8: level = 'B'; break
+            case 7: level = 'C'; break
+            case 6: level = 'D'; break
+            default: level = 'E'
+        }
+        console.log(score, level)
+    </script>
+</body>
+</html>

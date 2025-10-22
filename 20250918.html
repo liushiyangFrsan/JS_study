@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 定义变量
+        var x = 100
+        console.log(x+2000)
+
+
+        var x = 300
+        var y = x + 2000
+        console.log(y)
+
+        var x 
+        x = 200
+        console.log(x+2000)
+
+        var z, m, n
+        console.log(z)
+        console.log(m)
+        console.log(n)
+
+        var a = 1, b = 2, c = 3
+        console.log(a)
+        console.log(b)
+        console.log(c)
+
+        // 数据类型
+        var age = 18
+        console.log(age)
+
+        var price = 12.5
+        console.log(price)
+
+        var year = 2e3      // 科学计数法
+        console.log(year)
+
+        var a = 0xff        // 十六进制：15 * 16 + 15
+        console.log(a)
+
+        var b = 0o77
+        console.log(b)      // 八进制：7 * 8 + 7
+
+        var c = 0b11
+        console.log(c)      // 二进制：2 * 1 + 1
+
+        var num1 = 10
+        var num2 = '20'
+        console.log(num1+num2)
+
+        var str = 'hello'
+        console.log(str)
+
+        var isChecked = false
+        console.log(isChecked)
+
+        var witchObject = null
+        console.log(witchObject)
+        witchObject = {'name': '刘士阳'}
+        console.log(witchObject)
+
+        var a = 'aaa'
+        console.log(typeof a)
+
+        var b = 100
+        console.log(typeof b)
+
+        var c = true
+        console.log(typeof c)
+        console.log(typeof(c))
+        console.log(typeof typeof a)
+        console.log(typeof a + 100)
+        console.log(typeof(a+100))
+
+        var d 
+        console.log(typeof d)
+
+        var e = null
+        console.log(typeof e)
+
+        // 数据类型转换
+        var a = '100'
+        var b = Number(a)
+        console.log(a, b)
+        console.log(typeof a, typeof b)
+
+        var a = 'abc'
+        var b = Number(a)
+        console.log(a, b)
+        console.log(typeof a, typeof b)
+
+        var a = true 
+        var b = Number(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = false
+        var b = Number(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = null
+        var b = Number(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = undefined
+        var b = Number(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = '123abc'
+        var b= parseInt(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = '12.123abv'
+        var b = parseInt(a)
+        console.log(a, b, typeof a, typeof b)
+        var b = parseFloat(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = '12.123'
+        var b = Number(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = '100'
+        var b = a + 0
+        console.log(a, b, typeof a, typeof b)
+
+        var a = '100'
+        var b = a - 0
+        console.log(a, b, typeof a, typeof b)
+
+        var a = '100'
+        var b = a - 1
+        console.log(a, b, typeof a, typeof b)
+
+        var a = '100'
+        var b = a / 1
+        console.log(a, b, typeof a, typeof b)
+
+        var a = '100'
+        var b = a * 1
+        console.log(a, b, typeof a, typeof b)
+
+        var a = '100'
+        var b = a * 2
+        console.log(a, b, typeof a, typeof b)
+
+        var a = 100
+        var b = String(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = true
+        var b = String(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = undefined
+        var b = String(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = null
+        var b = String(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = 100
+        var b = a.toString()
+        console.log(a, b, typeof a, typeof b)
+
+
+        var a = true
+        var b = a.toString()
+        console.log(a, b, typeof a, typeof b)
+
+        var a
+        var b = a.toString()
+        console.log(a, b, typeof a, typeof b)
+
+        // var a = undefined
+        // var b = a.toString()
+        // console.log(a, b, typeof a, typeof b)
+
+        // var a = null
+        // var b = a.toString()
+        // console.log(a, b, typeof a, typeof b)
+
+        var a = 100
+        var b = a + ''
+        console.log(a, b, typeof a, typeof b)
+
+        var a = 100
+        var b = Boolean(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = 0
+        var b = Boolean(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = ''
+        var b = Boolean(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = null
+        var b = Boolean(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a 
+        var b = Boolean(a)
+        console.log(a, b, typeof a, typeof b)
+
+        var a = NaN
+        var b = Boolean(a)
+        console.log(a, b, typeof a, typeof b)
+        
+        // 运算符
+        var a = 10
+        var b = 20
+        console.log(a + b)
+
+        var a = 10
+        var b = true
+        console.log(a + b)
+
+        var a = 10
+        var b = '11'
+        console.log(a + b)
+
+        var a = 10
+        var b = 3
+        console.log(a % b)
+
+        var a = 1000
+        var b = 60
+        console.log(parseInt(a/b) + ':' + a%b)
+
+        console.log(1+'2'*3+4)
+
+        console.log('1' + '2'*3 + 4)
+
+        // 赋值运算符
+
+        var a = 1
+        a = 2
+        console.log(a)
+
+        var a = 5
+        var b = 6
+        var m
+        console.log(a, b)
+        m = a
+        a = b
+        b = m
+        console.log(a, b)
+
+        var number = 5
+        number += 1
+        console.log(number)
+
+        var x = 10
+        x *= 10
+        console.log(x)
+
+        var x = 10
+        x /= 10
+        console.log(x)
+
+        var x = 10
+        x %= 10
+        console.log(x)
+
+        // 比较运算符
+
+        var sum = 100
+        console.log(sum > 200)
+
+        var age = '22'
+        console.log(age==22)
+        console.log(age===22)
+        console.log(parseInt(age)===22)
+
+        console.log(true==1)
+        console.log(true===1)
+        console.log(''==0)
+        console.log(''===0)
+        console.log(undefined==0)
+        console.log(undefined===0)
+
+        var x = 5
+        console.log(x != 6)
+
+        var x = 6
+        console.log(x != 6)
+
+        var x = '6'
+        console.log(x != 6)
+        console.log(x !== 6)
+        console.log(parseInt(x) !== 6)
+
+        // 逻辑运算符
+
+        var a = true
+        var b = true
+        console.log(a && b)
+
+        var category = '衣服'
+        var price = 300
+        console.log(category==='家电'&&price>200)
+
+        var category = '家电'
+        var price = 300
+        console.log(category==='家电'&&price>200)
+
+        var day = 5
+        console.log(day===6 || day===7)
+
+        var day = 7
+        console.log(day===6 || day===7)
+
+        var c = true
+        console.log(!c)
+
+        var length = 5
+        console.log(length === 5)
+
+        var length = 0
+        console.log(!length)
+
+        var length = 10
+        console.log(length===10)
+        console.log(!length)
+
+        console.log(!null)
+        console.log(!0)
+        console.log(!NaN)
+        console.log(!undefined)
+        console.log(!'')
+        console.log(!'123')
+
+        var x = '111'
+        console.log(Boolean(x))
+        console.log(!!x)
+
+        var yy
+        console.log(yy)
+        console.log(yy && yy.toString())
+
+        var yy = 100
+        console.log(yy && yy.toString(), typeof yy, typeof yy.toString())
+
+        var yy = 1000
+        console.log(yy && yy.toString())
+        
+        var z = ''
+        console.log(z || '这个家伙很懒，什么也没有留下！！！')
+        document.write('这个家伙很懒，什么也没有留下！！！')
+
+        var z = '找钱孙俪'
+
+        console.log(z || '这个家伙很懒，什么也没有留下！！！')
+        document.write('这个家伙很懒，什么也没有留下！！！')
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

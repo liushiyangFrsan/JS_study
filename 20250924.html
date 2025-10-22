@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while (false) {
+            console.log('while hello')
+        }
+
+        do {
+            console.log('do_while hello')
+        } while (false)
+
+        var n = 0
+        do {
+            console.log('li', n)
+            n++
+        } while (n<10)
+
+        // 计算 1 ~ 100 的累加结果
+        var n = 0
+        var sum = 0
+        do {
+            sum += n
+            n ++
+        } while (n <= 100)
+        console.log('计算100的累加求和', n, sum)
+
+        
+        // do {
+        //     var name = prompt('请输入姓名:')
+        //     console.log(name, Boolean(name), !name, name === 'null', !name || name === 'null')
+        //     // 1、页面不能显示null      2、!name || name === 'null' 计算逻辑
+        //     if (name) {document.write(name)}
+        // } while(!name || name === 'null')
+
+        do{
+            var name = prompt('请输入姓名:')
+            if (name==='null'){name=''}
+            document.write(name)
+        } while (!name)
+
+
+        
+    </script>
+</body>
+</html>

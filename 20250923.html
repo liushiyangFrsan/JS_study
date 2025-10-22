@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = 0
+        while (num < 10) {
+            console.log('hello')
+            num++
+        }
+
+        var num = 0
+        while (num < 10) {
+            console.log('hello', num)
+            num += 2
+        }
+
+        // 案例1：计算1 ~ 100 所有数字之和
+        var n = 0
+        var sum = 0
+        while (n <= 100){
+            sum += n
+            n ++
+        }
+        console.log(n, sum)
+        // 案例2：计算一个数字的阶乘
+        var number = 10
+        var num = 1
+        var sum = 1
+        while (num <= number) {
+            sum *= num
+            num ++
+        }
+        console.log(num, sum)
+
+        var number = 10
+        var sum = 1
+        while (number > 0) {
+            sum *= number
+            number --
+        }
+        console.log(number, sum)
+    </script>
+</body>
+</html>

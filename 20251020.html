@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for(var n=1; n<=10; n++){
+        //     console.log(n)
+        //     if (n <= 3) {console.log("广告商品", n)}
+        //     else{console.log("普通商品", n)}
+        // }
+
+        // for (var i=1, sum=0; i<=100; i++){
+        //     sum += i
+        // }
+        // console.log(sum)
+
+        // for (var i=1000, n=0; i<=2000; i++){
+        //     if(i%400===0 || i%4===0 && i%100!==0){
+        //         n += 1
+        //         console.log('闰年', i)
+        //         document.write(i + ' ')
+        //     }
+        // }
+        // console.log(n)
+
+        // for (var i=1000, n=0; i<=2000; i+=4){
+        //     if(i%400===0 || i%100!==0){
+        //         n += 1
+        //         document.write(i, "  ")
+        //     }
+        // }
+        // console.log(n)
+
+        count=0
+        for(var i=1000; i<=2000; i+=4){
+            if(i%400===0 || i%100!==0){
+                count +=1
+                document.write(i, '  ')
+                if (count%4===0){
+                document.write('<br/>')
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
