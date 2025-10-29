@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            width: 80px;
+            height: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // function test(){
+        //     for(var i=1; i<=9; i++){
+        //         for(var j=1; j<=i; j++){
+        //             document.write('<span>' + i + '*' + j + '=' + i*j + '</span>')
+        //         }
+        //         document.write('<br>')
+        //     }
+        // }
+        // test()
+        // document.write('<br>')
+        // test()
+        // document.write('<br>')
+        // test()
+
+        // function test(num){
+        //     if (num===undefined) num=9
+        //     //  alert('请传入参数')
+        //     //  console.log('请传入参数') 
+        //     //  console.error('请传入参数') 
+        //     for(var i=1; i<=num; i++){
+        //         for(var j=1; j<=i; j++){
+        //             document.write('<span>' + i + '*' + j + '=' + i*j + '</span>')
+        //         }
+        //         document.write('<br>')
+        //     }
+        // }
+        // test(9)
+        // document.write('<br>')
+        // test(6)
+        // document.write('<br>')
+        // test(4)
+        // document.write('<br>')
+        // test()
+
+        // function test(a, b){
+        //     console.log('我是test', a, b)
+        // }
+        // test(1,2)
+
+        // function test(a, b){
+        //     var yinliao = a===1?'可乐':'雪碧'
+        //     var xiaoshi = b===2?'薯条':'鸡米花'
+        //     var zhushi = '鸡腿堡'
+        //     console.log('我是套餐A', yinliao, xiaoshi, zhushi)
+        // }
+        // var a = 100, b = 100
+        // test(1,2)
+        // test(2,1)
+        // test()
+        // console.log(a, b)
+
+        // function add(x,y,z){
+        //     var result = x+y+z
+        //     console.log(result)
+        // }
+        // add(1,2,3)
+
+        // function add(x,y,z){
+        //     var result = x+y+z
+        //     console.log(result)
+        //     return result
+        // }
+        // var res = add(1,2,3)
+        // console.log(res)
+
+        // function test(a){
+        //     console.log('传给后端用', a)
+        // }
+        // test(res)
+
+        function isPrime(num){
+            for(var i=2; i<=num/2; i++){
+                if (num % i === 0){
+                    break
+                }
+            }
+            // i >= num/2?console.log('是质数'):console.log('不是质数')
+            return i >= num/2?false:true
+        }
+        // var a = isPrime(111)
+        // var b = isPrime(71)
+        // console.log(a, b)
+
+        for(var a=10; a<=110; a++){
+            if(isPrime(a)){
+                console.log(a)
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
