@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var obj={
+            name: 'liushiyang',
+            age: 30,
+            location: 'beijing',
+            a:1,
+            b:2
+        }
+        
+        document.write('name: '+obj.name)
+        document.write('<br>')
+        document.write('age: '+obj.age)
+        document.write('<br>')
+        document.write('location: '+obj.location)
+        document.write('<br>')
+
+        for(var i in obj){
+            console.log(i)
+            document.write(i + ' :' + obj[i] + '<br>')
+        }
+    </script> -->
+
+    <!-- <script>
+        var str = 'abcd'
+        var strcp = str
+        console.log(str, strcp, str===strcp)
+
+        strcp = 'bcd'
+        console.log(str, strcp, str===strcp, str==strcp)
+
+        var obj = {
+            name: 'liushiyang',
+            age: 30
+        }
+        var obj1 = obj
+        console.log(obj, obj1, obj==obj1, obj===obj1)
+
+        obj1.name = 'liu'
+        console.log(obj, obj1, obj==obj1, obj===obj1)
+
+        var obj3 = {name: 'liushiyang'}
+        var obj4 = {name: 'liushiyang'}
+        console.log(obj3, obj4, obj3==obj4, obj3===obj4)
+
+        var obj5 = {
+            name: 'liushiyang',
+            age: 30,
+            location: 'beijing'
+        }
+        var obj6 = {}
+        for(var i in obj){
+            obj6[i] = obj5[i]
+        }
+        console.log(obj5, obj6, obj5==obj6, obj5===obj6)
+
+        obj5.location='changchun'
+        console.log(obj5, obj6, obj5==obj6, obj5===obj6)
+    </script> -->
+
+    <!-- <script>
+        var ageArr=[12,14,15,16]
+        console.log(ageArr)
+
+        var nameArr=['liu', 'shi', 'yang']
+        console.log(nameArr)
+
+        var obj1={name:'liu',age:20}
+        var obj2={name:'shi',age:25}
+        var studentArr=[obj1, obj2]
+        console.log(studentArr)
+
+        var studentArr2=[{name:'liu',age:20},{name:'shi',age:25}]
+        console.log(studentArr)
+
+        var arr1=new Array(12,13,14)
+        console.log(arr1)
+
+        var arr2 = new Array(10)
+        console.log(arr2)
+    </script> -->
+
+    <!-- <script>
+        var arr1=[1,2,3,4]
+        console.log(arr1, arr1.length)
+
+        var arr1=[1,2,3,4,8]
+        console.log(arr1, arr1.length)
+
+        arr1.length=3
+        console.log(arr1)
+
+        arr1.length=0
+        console.log(arr1)
+
+        var arr2 = ['liu', 'shi', 'yang']
+        console.log(arr2[0], arr2[1], arr2[2], arr2[3])
+
+        console.log(arr2)
+        arr2[0]='liushiyang'
+        console.log(arr2)
+
+        arr2[3] = 'test'
+        console.log(arr2)
+
+        arr2[5] = 'text'
+        console.log(arr2)
+
+        var arr3=[3,4,5,6,7,8]
+        for(i=0; i<arr3.length; i++){console.log(i, arr3[i])}
+
+        var arr4 = arr3
+        console.log(arr3, arr4, arr3==arr4, arr3===arr4)
+
+        arr4[0] = 'liu'
+        console.log(arr3, arr4, arr3==arr4, arr3===arr4)
+
+        arr5 = []
+        for(i=0; i<arr3.length; i++){
+            arr5[i] = arr3[i]
+        }
+        console.log(arr3, arr5, arr3==arr5, arr3===arr5)
+        arr5[0] = 'liushiyang'
+        console.log(arr3, arr5, arr3==arr5, arr3===arr5)
+    </script> -->
+
+    <!-- <script>
+        // var arr = [4, 5]
+        // var arr = [4, 3, 7, 1, 5]
+        // var arr = [4, 3, 2]
+        // var arr = [4, 3, 2, 1]
+        var arr = [44, 3, 2, 1, 11, 33]
+        console.log(arr)
+        var temp = arr[0]
+        arr[0]=arr[1]
+        arr[1]=temp
+        console.log(arr)
+
+        for(j=0; j<=arr.length-1; j++){
+            for(var i=0; i<arr.length-1-j; i++){
+            if(arr[i]>arr[i+1]){
+                var temp=arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = temp
+                }
+            }
+        }
+        console.log(arr)
+    </script> -->
+
+    <!-- <script>
+        // var arr = [4, 3, 2, 1]
+        var arr = [44, 3, 2, 1, 5, 8, 111]
+        console.log(arr)
+        // for(j=0; j<arr.length-1; j++){
+        //     for(i=0; i<arr.length-1; i++){
+        //     if(arr[i]>arr[i+1]){
+        //         minindex=i+1
+        //         }
+        //     }
+        //     console.log(minindex)
+        //     var temp = arr[minindex]
+        //     arr[minindex] = arr[j]
+        //     arr[j] = temp
+        // }
+        // console.log(arr)
+
+        for(j=0; j<arr.length-1; j++){
+            var minindex=j
+            for(i=j+1; i<arr.length; i++){
+                if(arr[i]<arr[minindex]){
+                    minindex=i
+                }
+            }
+            // var temp = arr[minindex]
+            // arr[minindex] = arr[j]
+            // arr[j] = temp
+            if(minindex!==j){
+                var temp = arr[j]
+                arr[j] = arr[minindex]
+                arr[minindex] = temp
+            }
+            
+        }
+        console.log(arr)
+    </script> -->
+
+    <!-- <script>
+        var arr = [1, 2, 3]
+        console.log(arr)
+        var res = arr.push(4)
+        console.log(arr, res)
+
+        var respop = arr.pop()
+        console.log(arr, respop)
+
+        var resunshift = arr.unshift('tiechui')
+        console.log(arr, resunshift)
+        
+        var resshift = arr.shift()
+        console.log(arr, resshift)
+
+        // var ressplice = arr.splice(1,1)
+        // console.log(arr, ressplice)
+
+        // var ressplice = arr.splice(1,2)
+        // console.log(arr, ressplice)
+
+        // var ressplice = arr.splice(1, 2, 'liushi')
+        // console.log(arr, ressplice)
+
+        // var ressplice = arr.splice(1, 2, 'liushi', 'liushiyang')
+        // console.log(arr, ressplice)
+
+        var ressplice = arr.splice(1, 0, 'liushi', 'liushiyang')
+        console.log(arr, ressplice)
+
+        var ressplice = arr.splice(0, 0, 'aaa')
+        console.log(arr, ressplice)
+
+        var ressplice = arr.splice(arr.length, 0, 'bbbb')
+        console.log(arr, ressplice)
+
+        var resreverse = arr.reverse()
+        console.log(arr, resreverse)
+
+        var arr4 = [11, 21, 3, 56, 7]
+        var ressort = arr4.sort()
+        console.log(arr4, ressort)
+
+        var ressort = arr4.sort(function(a,b){return a-b})
+        console.log(arr4, ressort)
+
+        var ressort = arr4.sort(function(a,b){return b-a})
+        console.log(arr4, ressort)
+    </script> -->
+
+    <script>
+        // var arr1 = [1, 2, 3]
+        // var arr2 = [4, 5, 6]
+        // var arr3 = arr1.concat(arr2)
+        // console.log(arr1, arr2, arr3)
+        // var arr4 = arr2.concat(arr1)
+        // console.log(arr1, arr2, arr4)
+        // var arr3 = arr1.concat(arr2, 7)
+        // console.log(arr1, arr2, arr3)
+        // var arr3 = arr1.concat(arr2, 7, [8, 9])
+        // console.log(arr1, arr2, arr3)
+        // var arr3 = arr1.concat()
+        // console.log(arr1, arr3)
+        // var arr3 = arr1.concat()
+        // arr3.pop()
+        // console.log(arr1, arr3)
+
+        var arr = [1, 2, 3, 4, 5]
+        document.write(arr)
+        document.write('<br>')
+        document.write(arr.join('-'))
+        document.write('<br>')
+        document.write(arr.join('|'))
+        document.write('<br>')
+
+        var arr = []
+        for(i=0; i<5; i++){
+            console.log(arr.push(i))
+        }
+
+        var arr = []
+        for(i=0; i<5; i++){
+            arr.push('<li>' + i + '</li>')
+        }
+        console.log(arr)
+        document.write(arr.join(''))
+
+        var arr = ['aaa', 'bbbb', 'ccc', 'ddd', 'eeee', 'aaa']
+        var arr2 = arr.slice(0,2)
+        console.log(arr, arr2)
+
+        var arr3 = arr.slice(2)
+        console.log(arr, arr3)
+
+        var arr4 = arr.slice()
+        console.log(arr, arr4, arr==arr4, arr===arr4)
+        arr4.pop()
+        console.log(arr, arr4, arr==arr4, arr===arr4)
+
+        var arr5 = arr.slice(2,4)
+        console.log(arr, arr5)
+
+        var arr6 = arr.slice(2,-1)
+        console.log(arr, arr6)
+
+        var res = arr.indexOf('liu')
+        console.log(res)
+
+        var res = arr.indexOf('aaa')
+        console.log(res)
+
+        var res = arr.indexOf('ccc')
+        console.log(res)
+
+        var res = arr.indexOf('aaa', 2)
+        console.log(res)
+
+        var res = arr.lastIndexOf('aaa')
+        console.log(res)
+
+        var res = arr.lastIndexOf('aaa', 3)
+        console.log(res)
+
+        var res = arr.lastIndexOf('liu', 3)
+        console.log(res)
+
+    </script>
+
+</body>
+</html>
