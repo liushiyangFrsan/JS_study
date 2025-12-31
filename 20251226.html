@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <script>
+        // // 同步，异步
+        // console.log('1111')
+        // setTimeout(function(){
+        //     console.log('kerwin')
+        // }, 1000)
+        // console.log('2222')
+
+        // // 同步先执行，异步后执行
+        // console.log('1111')
+        // setTimeout(function(){
+        //     console.log('kerwin')
+        // }, 0)
+        // console.log('2222')
+
+        // console.log('1111')
+        // setTimeout(function(){
+        //     console.log('kerwin')
+        // })
+        // console.log('2222')
+        // while(true){}
+
+        // 倒计时
+        var currentDate = new Date()
+        var targetDate = new Date('2025-12-31')
+        console.log(targetDate - currentDate)
+
+        function diffTime(current, target){
+            var sub = Math.ceil((target - current)/1000)
+            // console.log(sub)
+            var day = parseInt(sub/(60*60*24))
+            // console.log(day)
+            var hours = parseInt(sub%(60*60*24)/(60*60))
+            // console.log(hours)
+            var minute = parseInt(sub%(60*60)/60)
+            // console.log(minute)
+            var second = sub%60
+            // console.log(second)
+
+            var obj = {
+                day:day,
+                hours:hours,
+                minute:minute,
+                second:second
+            }
+            return obj
+        }
+        var res = diffTime(currentDate, targetDate)
+        console.log(res)
+        document.write(`距2026-01-01还剩${res.day}天${res.hours}时${res.minute}分${res.second}秒`)
+
+        // setInterval(function(){
+        //     document.write(`距2026-01-01还剩${res.day}天${res.hours}时${res.minute}分${res.second}秒`)
+        // }, 1000);
+
+        // setInterval(function(){
+        //     var res = diffTime(currentDate, targetDate)
+        //     document.write(`距2026-01-01还剩${res.day}天${res.hours}时${res.minute}分${res.second}秒`)
+        //     document.write('<br>')
+        // }, 1000)
+
+        box.innerHTML = '111'
+        box.innerHTML = '222'
+        box.innerHTML = '333'
+
+        setInterval(function(){
+            var currentDate = new Date()
+            var res = diffTime(currentDate, targetDate)
+            console.log(box)
+            box.innerHTML = `距2026-01-01还剩${res.day}天${res.hours}时${res.minute}分${res.second}秒`
+        }, 1000)
+
+
+
+    </script>
+</body>
+</html>

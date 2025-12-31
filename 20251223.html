@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = 'btn1'>清除定时器-延时</button>
+    <button id = 'btn2'>清除定时器-间隔</button>
+    <script>
+
+        var time1 = setTimeout(function(){
+            console.log('kerwin')
+        }, 2000)
+
+        var time2 = setInterval(function(){
+            console.log(new Date())
+        }, 1000);
+
+        console.log(time1, time2)
+
+
+        console.log(btn1, btn2)
+        console.log(btn1)
+
+        btn1.onclick = function(){
+            clearTimeout(time1)
+            console.log('btn1 click')
+        }
+
+        btn2.onclick = function(){
+            clearInterval(time2)
+            console.log('btn2 click')
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 模糊查询
+
+        // var arr = ['aaa', 'abc', 'bcc', 'bcd', 'ddd', 'ccd']
+        // var res = arr.filter(function(item){return item === 'abc'})
+        // console.log(res)
+
+        // var res = arr.filter(function(item){return item.indexOf('b') > -1})
+        // console.log(res)
+
+        // var arr = ['aaa', 'abc', 'bcc', 'bcd', 'ddd', 'ccd']
+        // var input = prompt('请输入查询的内容:')
+        // var res = arr.filter(function(item){return item.indexOf(input) !==-1})
+        // console.log(res)
+
+
+
+        // json字符串
+
+        // var str = '{"name":"liusy", "age":100}'
+        // console.log(str)
+        // console.log(typeof(str))
+        // console.log(str.name)
+
+        // var obj = JSON.parse(str)
+        // console.log(obj)
+        // console.log(typeof(obj))
+        // console.log(obj.name)
+
+        // var str = 'hello'
+        // var obj = JSON.parse(str)
+        // console.log(obj)
+
+        // var str = '{name:"liusy", age:100}'
+        // var obj = JSON.parse(str)
+        // console.log(obj)
+        // console.log(typeof(obj))
+        // console.log(obj.name)
+
+        // var str = '{"name":"liusy", "age":100,}'
+        // var obj = JSON.parse(str)
+        // console.log(obj)
+        // console.log(typeof(obj))
+        // console.log(obj.name)
+
+        // var obj1 = {"name": "tiechui"}
+        // var str1 = JSON.stringify(obj1)
+        // console.log(obj1, str1)
+
+        // var obj1 = {name: "tiechui"}
+        // var str1 = JSON.stringify(obj1)
+        // console.log(obj1, str1)
+
+
+
+        // 模板字符串
+
+        // var myhtml = "<li>1111</li>"
+        // document.write(myhtml)
+
+        // var myhtml = "<li>1111</li><li>2222</li><li>3333</li>"
+        // document.write(myhtml)
+
+        // var myhtml = "<li>1111</li>\
+        // <li>2222</li>\
+        // <li>3333</li>"
+        // document.write(myhtml)
+
+        // var myhtml = `<li>1111</li>
+        // <li>2222</li>
+        // <li>3333</li>`
+        // document.write(myhtml)
+
+        // var str = 'my name is Mr liusy'
+        // document.write(str)
+
+        // var name = 'Mr liusy'
+        // var str = 'my name is ' + name
+        // document.write(str)
+
+        // var name = 'Mr liusy'
+        // var str = `my name is ${name}`
+        // document.write(str)
+
+        // var name = 'Mr liusy'
+        // var str = `my name is ${name} ${10+20}`
+        // document.write(str)
+
+        // var name = 'Mr liusy'
+        // var str = `my name is ${name} ${10+20} ${10>20?'aaa':'bbb'}`
+        // document.write(str)
+
+        // var name = 'Mr liusy'
+        // var str = `my name is ${name} ${10+20} ${10>20?'aaa':bbb}`
+        // document.write(str)
+
+        var arr = ['xiaoming', 'kerwin', 'tiechui']
+        var arr2 = arr.map(function(item){return `<li>${item}</li>`})
+        console.log(arr2)
+        document.write(arr2.join(''))
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

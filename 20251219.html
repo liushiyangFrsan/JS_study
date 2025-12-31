@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 保留小数位数
+        // var price = 123.45678
+        // console.log(price.toFixed(2))
+
+        // var price = 123.4
+        // console.log(price.toFixed(2))
+
+        // var price = 123.4
+        // console.log(price.toFixed(2)+100)
+
+        // console.log(price.toFixed(2), typeof(price.toFixed(2)))
+
+        // var price = 123.4
+        // console.log(price.toFixed(2)-0+100)
+
+        // var sum = price.toFixed(2)-0+100
+        // console.log(sum.toFixed(2))
+
+        // var price = 123.45678
+        // var sum = price.toFixed(2)-0+100
+        // console.log(sum.toFixed(2))
+
+        // // 常用的数学方法
+        // console.log(Math)
+        // console.log(Math.random())
+        // console.log(Math.round(4.56))
+        // console.log(Math.round(4.46))
+        // console.log(Math.ceil(4.46))
+        // console.log(Math.floor(4.46))
+        // console.log("绝对值", Math.abs(10))
+        // console.log("绝对值", Math.abs(-10))
+        // console.log("绝对值", Math.abs(-10.2))
+        // console.log('平方根', Math.sqrt(25))
+        // console.log('平方根', Math.sqrt(8))
+        // console.log('指数', Math.pow(2,3))
+        // console.log('指数', Math.pow(3,3))
+        // console.log('最大值', Math.max(10, 50, 20, 34))
+        // console.log('最小值', Math.min(10, 50, 20, 34))
+        // console.log('Π', Math.PI)
+
+        // // 随机整数 [0, 10) round四舍五入取整概率不均衡, 是有可能取到10的
+        // var res = Math.random() * 10
+        // var res = Math.round(res)
+        // console.log(res)
+
+        // // 随机整数 [0, 10)
+        // var res = Math.random() * 10
+        // var res = Math.floor(res)
+        // console.log(res)
+
+        // // 随机整数 [0, 10]
+        // var res = Math.random() * 10
+        // var res = Math.ceil(res)
+        // console.log(res)
+
+        // var res = Math.random() * 11
+        // var res = Math.floor(res)
+        // console.log(res)
+
+        // // 随机整数 [10, 20)
+        // var res = Math.random() * 10
+        // var res = Math.floor(res) + 10
+        // console.log(res)
+
+        // // 随机整数 [10, 20]
+        // var res = Math.random() * 11
+        // var res = Math.floor(res) + 10
+        // console.log(res)
+
+        // // 函数  [min, max) 不包含
+        // function getRnd1(min, max){
+        //     if(min>max){
+        //         console.error('参数有误')
+        //         return
+        //     }
+        //     var res = Math.random()
+        //     res = Math.floor(res*(max-min)) + min
+        //     return res
+        // }
+        // console.log(getRnd1(20, 30))
+        // console.log(getRnd1(200, 300))
+        // console.log(getRnd1(20, 18))
+
+        // // 函数  [min, max] 包含
+        // function getRnd2(min, max){
+        //     if(min>max){
+        //         console.error('参数有误')
+        //         return
+        //     }
+        //     var res = Math.random()
+        //     res = Math.floor(res*(max-min+1)) + min
+        //     return res
+        // }
+        // console.log(getRnd2(10, 12))
+        // console.log(getRnd2(100, 12))
+
+        // // 时间对象
+        // var date = new Date()
+        // console.log(date)
+        // console.log(typeof(date))
+
+        // var date1 = new Date(1000)
+        // console.log(date1)
+
+        // var date1 = new Date(10000)
+        // console.log(date1)
+
+        // var date2 = new Date(2023, 10)
+        // console.log(date2)
+
+        // var date2 = new Date(2023, 0)
+        // console.log(date2)
+
+        // var date2 = new Date(2023, 0, 3)
+        // console.log(date2)
+
+        // var date2 = new Date(2023, 0, 3, 10, 10, 10)
+        // console.log(date2)
+
+        // var date3 = new Date('2025年5月')
+        // console.log(date3)
+
+        // var date3 = new Date('2025-10-10 10:10:10')
+        // console.log(date3)
+
+        // var date3 = new Date('2025-10-1010:10:10')
+        // console.log(date3)
+
+        // var date3 = new Date('2025/10/10 10:10:10')
+        // console.log(date3)
+
+        // // 时间对象常用的方法
+        // var date = new Date()
+        // console.log(date)
+        // console.log(date.getFullYear())
+        // console.log(date.getMonth())
+        // console.log(date.getDate())
+        // console.log(date.getDay())
+        // console.log(date.getHours())
+        // console.log(date.getMinutes())
+        // console.log(date.getSeconds())
+        // console.log(date.getMilliseconds())
+        // console.log(date.getTime())
+        // console.log(new Date(1766131375579))
+        
+        // date.setFullYear(2024)
+        // console.log(date)
+        // date.setMonth(5)
+        // console.log(date)
+        // date.setDate(25)
+        // console.log(date)
+        // date.setHours(13)
+        // console.log(date)
+        // date.setMinutes(50)
+        // console.log(date)
+        // date.setSeconds(59)
+        // console.log(date)
+        // date.setTime(1766131375579)
+        // console.log(date)
+
+        // 倒计时定时器
+        setTimeout(function(){
+            console.log('liushiyang')
+        }, 1000)
+
+        setTimeout(function(){
+            console.log('liu')
+        }, 2000)
+
+        // 间隔定时器
+        setInterval(function(){
+            console.log('shi')
+            console.log(new Date())
+        }, 1000)
+
+        // 验证返回值
+        var time1 = setTimeout(function(){
+            console.log('liushiyang')
+        }, 1000)
+
+        var time2 = setInterval(function(){
+            console.log(new Date())
+        }, 1000)
+
+        console.log(time1, time2)
+
+    </script>
+</body>
+</html>
