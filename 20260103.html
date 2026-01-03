@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 浏览器本地存储 -->
+
+    <!-- <button id="btn1">存</button>
+    <button id="btn2">取</button>
+    <button id="btn3">删</button>
+    <button id="btn4">clear</button>
+    <script>
+        // btn1.onclick = function(){
+        //     // localStorage.setItem('name', 'liusy')
+        //     // localStorage.setItem('age', 30)
+        //     // localStorage.setItem('obj', {'name':'liusy', age:30})
+        //     localStorage.setItem('obj',JSON.stringify({'name':'liusy', age:30}))
+        // }
+        // btn2.onclick = function(){
+        //     // console.log(typeof(localStorage.getItem('age')), localStorage.getItem('age'))
+        //     // console.log(typeof(localStorage.getItem('obj')), localStorage.getItem('obj'))
+        //     console.log(typeof(JSON.parse(localStorage.getItem('obj'))),JSON.parse(localStorage.getItem('obj')))
+        //     console.log(JSON.parse(localStorage.getItem('obj')).name)
+        // }
+        // btn3.onclick = function(){
+        //     localStorage.removeItem('name')
+        // }
+        // btn4.onclick = function(){
+        //     localStorage.clear()
+        // }
+
+        btn1.onclick = function(){
+            sessionStorage.setItem('name', 'liusy')
+        }
+        btn2.onclick = function(){
+            console.log(sessionStorage.getItem('name'))
+        }
+        btn3.onclick = function(){
+            sessionStorage.removeItem('name')
+        }
+        btn4.onclick = function(){
+            sessionStorage.clear()
+        }
+    </script> -->
+
+
+
+    <!-- 案例：记住用户名和密码 -->
+
+    <!-- <div>
+        用户名：
+        <input type="text" id="username">
+    </div>
+    <div>
+        密码：
+        <input type="password" id="password">
+    </div>
+    <div>
+        <button id="btn">登录</button>
+    </div>
+    <script>
+        var uservalue = localStorage.getItem('username')
+        var passvalue = localStorage.getItem('password')
+        // if(uservalue && passvalue){
+        //     username.value = uservalue
+        //     password.value = passvalue
+        // }
+
+        username.value = uservalue
+        password.value = passvalue
+
+        btn.onclick = function(){
+            // console.log('111')
+            // console.log(username)
+            console.log(username.value, password.value)
+            localStorage.setItem('username', username.value)
+            localStorage.setItem('password', password.value)
+        }
+    </script> -->
+
+    <div id="box"></div>
+    <li>
+        <li class="newsitem">111</li>
+        <li class="newsitem">111</li>
+        <li class="newsitem">111</li>
+        <li class="newsitem">111</li>
+        <li class="newsitem">111</li>
+        <li class="newsitem">111</li>
+        <li class="newsitem">111</li>
+        <li class="newsitem">111</li>
+    </li>
+    <script>
+        // console.log(box)
+        // box.innerHTML = '111'
+
+        // console.log(document.documentElement)
+        // console.log(document.head)
+        // console.log(document.body)
+        // console.log(document.getElementById('box'))
+
+        // var obox = document.getElementById('box')
+        // obox.innerHTML = '234555'
+        // obox.innerHTML = '222222'
+
+        var items = document.getElementsByClassName('newsitem')
+        // console.log(items)
+        // console.log(typeof(items))
+        // console.log(items.map)
+        // console.log(items.filter)
+        // items[0].innerHTML = 'news-222'
+        for(var i=0; i < items.length; i++){
+            items[i].innerHTML = 'news-' + i
+            // items[i].innerHTML = 'news-' + items[i].getHTML()
+        }
+        console.log(items)
+        var newitems = Array.from(items)
+        console.log(newitems)
+        console.log(newitems.map)
+        console.log(newitems.filter)
+    </script>
+
+</body>
+</html>
